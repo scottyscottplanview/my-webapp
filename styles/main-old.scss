@@ -1,0 +1,310 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+// SmartMenus jQuery Bootstrap Addon CSS
+// http://vadikom.github.io/smartmenus/src/demo/index.html
+@import "jquery.smartmenus.bootstrap.scss";
+
+/*************************************************************************/
+@mixin nav-top-default {
+  background-position:8px 3px;
+  background-repeat:no-repeat;
+  border-bottom:7px solid #FFF;
+  color: #999;
+  font-size:13px;
+  font-weight:bold;
+  line-height:25px;
+  max-height:32px;
+  min-width:100px;
+  padding:0px 0px 7px 30px;
+}
+/*************************************************************************/
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+body {
+  background-color: #ebebeb;
+  margin:0em 2em 2em 2em;
+}
+#site-wrapper {
+  background-color: #FFF;
+  margin:auto;
+  max-width: 1057px;
+  padding:0em;
+  width: 100%;
+}
+header {
+  &#site-header {
+    //background-position:bottom left;
+    //background-image:url('/img/product-demos-header-1037x108.png');
+    //background-repeat:no-repeat;
+    min-height:108px;
+    height:100%;
+    width:100%;
+  }
+  #site-header-content {
+
+    #logo-planview-row {
+      margin: 15px 10px 20px 17px;
+      text-align: left;
+    }
+    // social media icons
+    #social-media-links {
+      margin: 0px 10px 0px 15px;
+      text-align: left;
+      a {
+        margin-left: 10px;
+        &#icon-social-twitter-link {
+          margin-left:0px;
+        }
+      }
+    }    
+
+    /* style the top nav links */
+    ul.nav {
+      min-width: 400px;
+      padding-left:0px;
+    }
+    a#topnav-home {
+      @include nav-top-default;
+      background-image:url('/img/icon-home-20x16.png');
+      &:hover { 
+        background-color:#FFF;
+        border-bottom-color:#9b2c98; 
+      }
+    }
+    a#topnav-demos {
+      @include nav-top-default;
+      background-image:url('/img/icon-demos-20x16.png');
+      &:hover { 
+        background-color:#FFF;
+        border-bottom-color:#9b2c98; 
+      }
+    }
+    a#topnav-logout {
+      @include nav-top-default;
+      background-image:url('/img/icon-logout-20x16.png');
+      &:hover { 
+        background-color:#FFF;
+        border-bottom-color:#9b2c98; 
+      }
+    }
+    a#topnav-admin {
+      @include nav-top-default;
+      background-image:url('/img/icon-admin-area-20x16.png');
+      &:hover { 
+        background-color:#FFF;
+        border-bottom-color:#9b2c98; 
+      }m:7px solid #FFF;
+    }
+    li.open a#topnav-admin {
+      background-color:#FFF;
+      border-bottom-color:#9b2c98;
+    }
+  }
+}
+/* style the top nav link for the current page */
+.home a#topnav-home,
+.demo a#topnav-demos,
+.demos a#topnav-demos,
+.admin a#topnav-admin {
+  border-bottom-color:#9b2c98 !important;
+}
+
+#content-topper {
+  margin-top: 0px;
+  width: 100%;
+  height: 15px;
+  background-image: url('/img/bg-top-nav-bottom-1037x15.png');
+  background-position: top left;
+  background-repeat: repeat;
+}
+  
+main {
+  /* main general styles */
+  padding:0em 2em 2em 2em;
+  //h1#entry-title {
+  h1 {
+    color: #003479;
+    font: {
+      size: 24px;
+      weight: bold;
+    }
+  }
+  h2 {
+    color:#5381ac;
+    margin: 1em 0em 1em 0em;
+    font: {
+      size: 18px;
+      weight: bold;
+    }
+  }
+  ul li {
+    margin-left: 0px;
+    list-style-image: url('/img/bullet-arrow-8x10.png');
+    margin-bottom: .15em;
+  }
+  div.right-sidebar {
+    width:100%;
+    h2 {
+      color:#000;
+      font: {
+        size:20px;
+        weight:bold;
+      }
+      margin:0px 0px 10px -5px;
+      padding:4px 0px 0px 25px;
+      &#header-contact {
+        background-image:url('/img/icon-phone-contact-25x25.png');
+        background-position:0px 2px;
+        background-repeat:no-repeat;
+      }
+    }
+    .module-login {
+      background-color:#dcdcdc;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      max-width: 350px;
+      padding:25px 20px;
+      input {
+        &[type=password],
+        &[type=text] {
+          max-width:260px;
+          padding:3px 3px 3px 8px;
+          width:100%;
+        }
+      }
+      p {
+        margin: 20px 0px;
+      }
+    }
+    .module-contact-info {
+      background-color:#d4e8f7;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      max-width: 250px;
+      padding:10px 20px;
+      text-align:left;
+      a.email-link { white-space: nowrap; }
+    }
+    .module-related-content {
+      margin:20px 0px 20px -20px;
+      h2 { font-size:16px; }
+    }
+  }
+  
+  /* page-specific styles */
+  
+  /* demos page (demo list) */
+  p.back-to-demos {
+    margin-bottom: -15px;
+  }
+  a.demo-link {
+    font-weight: bold;
+  }
+  ul.product-demo-list li {
+    margin-bottom: 1em;
+  }
+  div.demo-description {
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    margin: 0.5em 0px 0px 0px;
+    padding: 5px 10px 8px 10px;
+    overflow:hidden;
+    li {
+      margin-bottom: .15em;
+    }
+  }
+  div.right-sidebar-demo-list {
+   float:right;
+    margin-left:20px;
+    max-width: 250px;
+  }
+
+  /* demo page (individual demos) */
+  div.limelight-video-respond {
+    margin-bottom:1em;
+  }
+
+  /* admin user page styles */
+  div.admin-bg {
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    margin: 0px 0px 0px 0px;
+    //overflow:hidden;
+    padding: 0px 20px 20px 20px;
+    
+    label {
+      font-weight:normal;
+    }
+
+    div.row-cell {
+      //border:1px solid #000;
+      min-height:40px;
+    }
+    div.row-cell-left {
+      //text-align:right;
+    }
+  }
+}
+
+/* footer styles */
+footer {
+  &#site-footer {
+    background-color:#5381ac;
+    color:#FFF;
+    padding:1em 2em;
+    text-align:right;
+  }
+}
+
+/*************************************************************************/
+/* page-specific styles */
+/* home */
+.home {
+  h1 {
+    display:none;
+  }
+  main {
+    margin:40px 0px 40px 40px;
+    min-height: 400px;
+  }
+  .content-main {
+    h2 {
+      margin-top:0px;
+    }
+    p {
+      max-width:530px;
+    }
+  }
+  .right-sidebar {
+    text-align: center;
+  } 
+  .module-contact-info {
+    margin: auto;
+  } 
+}
+/*************************************************************************/
+/* @media styles */
+@media (max-width: 768px) {
+  a.navbar-nav-link-top {
+    max-width:200px;
+    margin-left:25px;
+  }
+  ul.dropdown-menu {
+    display:none;
+  }
+  .collapse {
+    display:block;
+  }
+  .navbar-nav .sub-arrow, .navbar-nav .collapsible .sub-arrow {
+    border-width:0px;
+  }
+} 
+

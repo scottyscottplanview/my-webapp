@@ -1,0 +1,38 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+
+.follow-links {
+  text-align: center;
+  @media screen and (min-width: $screen-sm-min) {
+    float: right;
+  }
+}
+
+.site-header {
+  border-bottom: 1px solid #eee;
+}
+
+.site-title {
+  background: {
+    size: contain;
+    image: url('http://placehold.it/200x50');
+    repeat: no-repeat;
+    position: center center;
+  }
+  width: 200px;
+  height: 50px;
+  @include text-hide();
+  @media screen and (max-width: $screen-xs-max) {
+    margin: 10px auto;
+  }
+  @media screen and (min-width: $screen-sm-min) {
+    margin-top: 50px;
+  }
+}
+
+main {
+  padding-top: 20px;
+}
